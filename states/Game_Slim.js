@@ -803,19 +803,15 @@ else if (!dead)
             explodeSFX = this.game.add.audio('EXPLODE', 1, true);
             collectSFX = this.game.add.audio('collect', 1, true);
             collectSFX.allowMultiple = true;
+            music.allowMultiple = false;
             gameoverBGM = this.game.add.audio('gameover', 1, true);
             this.entersfx2 = this.add.audio('entersfx');
+            
             this.playBGM = function () {
                      music.play('',0,1,true);
-                     music.volume-=0.05;
-                     bgmplaying=true;   
+                     music.volume-=0.05;                       
             };
-            
-            if (bgmplaying){
-                music.stop();
-                bgmplaying=false;  
-            }            
-         
+                              
             this.dummyTween(1,this.playBGM);                   
             energyUPSFX = this.add.audio('sound');
         }
