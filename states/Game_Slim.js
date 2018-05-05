@@ -811,8 +811,11 @@ else if (!dead)
                      music.play('',0,1,true);
                      music.volume-=0.05;                       
             };
-                              
-            this.dummyTween(1,this.playBGM);                   
+            
+            if (!music.isPlaying){
+                this.dummyTween(1,this.playBGM);                   
+            }
+            
             energyUPSFX = this.add.audio('sound');
         }
 
