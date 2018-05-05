@@ -61,7 +61,8 @@ myTrialGame.Game_Slim = function(game){};
 
     var music;
     var gameoverBGM;
-
+    var bgmplaying = false;
+    
     var dead = false ;
     var shipTrail;
     var explodeParticles;
@@ -807,8 +808,15 @@ else if (!dead)
             this.playBGM = function () {
                      music.play('',0,1,true);
                      music.volume-=0.05;
+                     bgmplaying=true;   
             };
-             this.dummyTween(1,this.playBGM);
+            
+            if (bgmplaying){
+                music.stop();
+                bgmplaying=false;  
+            }            
+         
+            this.dummyTween(1,this.playBGM);                   
             energyUPSFX = this.add.audio('sound');
         }
 
