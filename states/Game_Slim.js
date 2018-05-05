@@ -812,8 +812,9 @@ else if (!dead)
                      music.volume-=0.05;                       
             };
             
-            if (!music.isPlaying){
+            if (!bgmplaying){
                 this.dummyTween(1,this.playBGM);                   
+                bgmplaying=true;
             }
             
             energyUPSFX = this.add.audio('sound');
