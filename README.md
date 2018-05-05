@@ -1,4 +1,4 @@
-# PIXOS!
+# Games!
 
 ## 2-Retro-style games in 1 repo!
 * I was really bored at work so I created these games in the awesome Javascript game engine called PhaserJS!
