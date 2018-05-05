@@ -608,7 +608,7 @@ else if (!dead)
 
 
             // SET A TEXT TO TELL THE PLAYER OF HIS ACCOMPLISHMENT
-            music.stop();
+            // music.stop();
 
 
             if (lives>0)
